@@ -1,0 +1,24 @@
+{
+temperature:"C",
+time:"min",
+versions:[]
+}
+
+ingredient definition -> ("name", "amount", "unit")
+version definition -> ("version","comment")
+
+#phase_name[<version:{ingredients}>, ingredients]{text}
+#stage_name{text}
+
+<version{ingredients}>
+
+Comment -> !{}!
+ingredient reference -> ${name}$
+url -> &{name:url}&
+temperature -> °{temperature}°
+time -> '{time}'
+structure reference -> %{stage_name}%
+
+
+ol -> *
+ul -> -

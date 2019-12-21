@@ -1,0 +1,267 @@
+<Green Beans:Ignore weight and volume measurements>
+#v1[This is the original version]{
+#Disclaimer[] -> []
+{ #Ignore measurements{
+    Especially volume and weight, I made them up (I have no real conception of how much this actually is).
+    Hopefully, the implied ratios may help.
+    }
+  #Constantly taste{
+    Especially after and while seasoning. Balance acidity (Lemon, Vinegar, ...), salinity (Salt, Soy Sauce, ...),
+    sweetness (Sugar, Honey, ...). Additionally, fat can give your dish additional body.
+  }
+    #Implicit instructions{
+    As in this recipe it is not required to impose any particular
+    restrictions upon the movement of food, I neglected to specify if and when to stir.
+     Please employ intuition to determine the frequency of stirring/tossing.
+  }
+}
+#Prepare Nuts[(Almonds,50,g), (Walnuts,50,g), (Powdered Sugar,30,g), (Salt,2, g), (Canola Oil,200,ml)] ->
+[(Candied Almonds,55,g), (Candied Walnuts,55,g)]
+{
+    #Blanch nuts{
+        Add ${nuts:[Almonds,Walnuts]}$ to ${salted:Salt}$ boiling water and boil them for about '{1 minute:1}'.
+    }
+    #Coat with sugar{
+        Place ${nuts:[Almonds,Walnuts]}$ in a !{container:with lid}!, add the ${sugar:Powdered Sugar}$ and mix
+        !{thoroughly:close the lid and shake ^_^}!
+    }
+    #Fry nuts{
+        !{Preheat:if you dip a wooden spoon into the oil you should see small bubbles}! ${oil:Canola Oil}$, add the ${coated:Powdered Sugar}$
+        ${nuts:[Almonds,Walnuts]}$ and fry them
+        for about '{5 minutes:5}'. Adjust heat !{accordingly:If they brown to fast, turn down the heat or remove the pan
+        from the stove until everything settles}!
+    }
+     #Cool nuts{
+        Remove ${nuts:[Almonds,Walnuts]}$ from the ${oil:Canola Oil}$ and let them !{cool:make sure they don't stick together}!.
+
+     }
+     #Video{
+      Taken from &{here:https://www.youtube.com/watch?v=SLEzZwc6uOE}&.
+    }
+}
+
+#Blanch Green Beans[(Green Beans,400,g), (Salt,5, g)] -> [(Blanched Green Beans, 400, g)]
+{     #Cook Green Beans{
+        Add the ${green beans:Green Beans}$ to !{salted:salinity below pasta water (but not to shy)}! boiling water and boil them for about !{2 minutes: Should retain bite}!.
+        }
+
+       #Cool Green Beans{
+        Drain the ${green beans:Green Beans}$ and immediately !{shock:Stops the cooking process and enhances color}!
+        them with cold water until they are cold.
+        }
+}
+
+
+
+
+#Make Sauce[(Onion,1,piece), (Garlic,3,cloves), (Salt,5, g), (Sugar,5, g),(Balsamic Vinegar, 60, ml),(Soy Sauce,50,ml), (Cornstarch,2,g)
+            (Butter,5,g), (Olive Oil,10,ml),(Water,60,ml)] -> [(Sauce,150,ml)]
+{
+      #Mise en Place{
+       Dice the !{onion: I would say the finer the better, but this is up to you. However, due to optics and mouth-feel I would refrain from slicing}!,
+       as well as the !{garlic: Again up to you, but not too fine to prevent burning}!. Make !{cornstarch-slurry: water and cornstarch}!. Arrange every ingredient for easy access.
+       }
+       #Make Base{
+       Add onion, !{fat: olive oil and butter mix}!, !{salt:draws moisture from onion}! and
+       !{sugar:not for sweetening but in order to, support the structural breakdown of the onion. Hence, be careful!}! to a saute pan and
+       !{saute: Add ingredients to cold pan and bring to medium to medium-high heat}!
+       until it becomes !{slight:just a slight brown tinge around the edges}! brown. Add the garlic and continue for about a
+       !{minute:Better adjust based on smell, i.e. if the garlic hits the pan, it is very fragrant, thus saute until the smell mellows out}!.
+       }
+       #Construct Sauce{
+       Crank heat up to high. Add balsamic vinegar. !{Wait:30 seconds or until the vinegar smell subsides, i.e. it no longer burns in the nose}!.
+       Add the soy sauce. !{Wait:30 seconds or until it has reduced slightly}!. !{Taste: Be careful, this will coat a lot
+       of green beans. So it is fine if it tastes strong.}! and !{adjust:Salt, Sugar}!.
+       !{Slowly: Add a little bit. Wait. Observe what happened. Repeat.}! add the cornstarch-slurry until the !{desired: it should lightly coat the back of a spoon}!
+       !{consistency: CAREFUL: If you add to much, you will end up with a slime}! is obtained and take off the heat.
+       }
+
+}
+
+#Construct Dish[(Sauce,150,ml),(Lemon Juice,7,ml),  (Sugar,1, g), (Salt,1, g),(Blanched Green Beans, 400, g),(Candied Almonds,55,g),(Candied Walnuts,55,g),(Butter,10,g), (Feta,100,g)]
+{
+    #Saute Green Beans{
+        Add the ${butter:Butter}$ to a large frying pan, when it is hot !{enough:When the butter should foam}! add the ${green beans:Blanched Green Beans}$
+        saute them for !{about:If the soften up to much, STOP!}! '{2 minutes:}'.
+        }
+    #Add the Sauce{
+        Add the sauce to the green beans and !{reduce:On high heat}! until it !{properly coats:If necessary carefully add a little water}! the ${green beans:Blanched Green Beans}$.
+        Remove from the stove and let it cool !{slightly:We don't want to melt the feta}!.
+        }
+    #Add Toppings{
+        Add the !{copped:roughly}! nuts and !{crumble:roughly}! in the feta.
+            }
+    #Adjust Seasoning{
+        Adjust acidity with ${lemon juice:Lemon Juice}$. Adjust seasoning with ${salt:Salt}$ and ${sugar:Sugar}$.
+        If frisky add additional ${butter:Butter}$.
+        }
+
+}
+}
+
+
+
+
+
+
+#v2[Italian-ish version]{
+#Disclaimer[] -> []
+{ #Ignore measurements{
+    Especially volume and weight, I made them up (I have no real conception of how much this actually is).
+    Hopefully, the implied ratios may help.
+    }
+  #Constantly taste{
+    Especially after and while seasoning. Balance acidity (Lemon, Vinegar, ...), salinity (Salt, Soy Sauce, ...),
+    sweetness (Sugar, Honey, ...). Additionally, fat can give your dish additional body.
+  }
+    #Implicit instructions{
+    As in this recipe it is not required to impose any particular
+    restrictions upon the movement of food, I neglected to specify if and when to stir.
+     Please employ intuition to determine the frequency of stirring/tossing.
+  }
+}
+#Prepare Nuts[(Almonds,50,g), (Walnuts,50,g), (Salt,2, g), (Olive Oil,15,ml)] ->
+[(Sauteed Almonds,50,g), (Sauteed Walnuts,50,g)]
+{
+
+    #Fry nuts{
+        !{Preheat:medium to medium-high}! oil in a saute pan. Add nuts and saute until lightly !{browned: Probably 2-3 minutes.}!.
+        Hit them with salt and set aside.
+    }
+
+}
+
+#Prepare Garlic[(Garlic,6,cloves),(chilli Flakes, 1, g), (Salt,2, g), (Olive Oil,60,ml)] ->
+[(Garlic Chips,50,g), (Garlic Oil,50,g)]
+{
+
+    #Chopp Garlic{
+        !{Peel:Lightly crush garlic for easy peeling}! and slice garlic into fine chips.
+    }
+    #Fry Garlic{
+        !{Preheat: Not to hot, if you add a slice of garlic it should bubble gently}! olive oil on medium heat. Add garlic and
+        fry for 1 or to minutes. Then add the !{chilli flakes:As everything optional}! until garlic becomes !{brown:beige}!.
+        Separate oil from !{solids: For extra taste hit them with salt, while they are still warm}! and set both aside.
+    }
+
+}
+
+
+#Blanch Green Beans[(Green Beans,400,g), (Salt,5, g)] -> [(Blanched Green Beans, 400, g)]
+{     #Cook Green Beans{
+        Add the ${green beans:Green Beans}$ to !{salted:salinity below pasta water (but not to shy)}! boiling water and boil them for about !{2 minutes: Should retain bite}!.
+        }
+
+       #Cool Green Beans{
+        Drain the ${green beans:Green Beans}$ and immediately !{shock:Stops the cooking process and enhances color}!
+        them with cold water until they are cold.
+        }
+}
+
+
+
+
+#Construct Dish[(Fired Garlic,30,ml),(Lemon Juice,2,ml), (Salt,3, g),(Blanched Green Beans, 400, g),(Sauteed Almonds,50,g),(Sauteed Walnuts,50,g),
+                (Garlic Oil,60,ml), (Parmesan,70,g), (Sun-dried tomatoes,50,g)]
+{
+    #Saute Green Beans{
+        Add the ${garlic oil:Garlic Oil}$ to a large frying pan, when it is hot !{enough:Adding a bean should sizzle}! add the ${green beans:Blanched Green Beans}$
+        saute them for !{about:If the soften up to much, STOP!}! '{2 minutes:}'.
+        }
+    #Add Toppings{
+        Add the !{copped:roughly}! nuts, the !{diced:5mm cubes or so}! in the parmesan, the garlic chips
+        and the !{copped:roughly}! sun-dried tomatoes.
+            }
+    #Adjust Seasoning{
+        Adjust acidity with ${lemon juice:Lemon Juice}$. Adjust seasoning with ${salt:Salt}$ and ${sugar:Sugar}$.
+        If frisky add additional ${butter:Butter}$ or ${olive oil:Olive Oil}$.
+        }
+
+}
+}
+
+
+
+#v3[Asian-ish version]{
+#Disclaimer[] -> []
+{ #Ignore measurements{
+    Especially volume and weight, I made them up (I have no real conception of how much this actually is).
+    Hopefully, the implied ratios may help.
+    }
+  #Constantly taste{
+    Especially after and while seasoning. Balance acidity (Lemon, Vinegar, ...), salinity (Salt, Soy Sauce, ...),
+    sweetness (Sugar, Honey, ...). Additionally, fat can give your dish additional body.
+  }
+  #Implicit instructions{
+    As in this recipe it is not required to impose any particular
+    restrictions upon the movement of food, I neglected to specify if and when to stir.
+     Please employ intuition to determine the frequency of stirring/tossing.
+  }
+
+}
+#Prepare Nuts[(Peanuts,100,g)] ->
+[(Roasted Peanuts,100,g)]
+{
+    #Option 1{
+        Add ${nuts:Peanuts}$ to a dry !{preheated:medium}! saute pan and roast
+        them until lightly browned.
+    }
+    #Option 2{
+        Place ${nuts:Peanuts}$ onto baking tray and roast in an !{oven:200C}! until lightly !{browned:10-15 minutes}!.
+    }
+
+}
+
+#Blanch Green Beans[(Green Beans,400,g), (Salt,5, g)] -> [(Blanched Green Beans, 400, g)]
+{     #Cook Green Beans{
+        Add the ${green beans:Green Beans}$ to !{salted:salinity below pasta water (but not to shy)}! boiling water and boil them for about !{2 minutes: Should retain bite}!.
+        }
+
+       #Cool Green Beans{
+        Drain the ${green beans:Green Beans}$ and immediately !{shock:Stops the cooking process and enhances color}!
+        them with cold water until they are cold.
+        }
+}
+
+
+
+
+#Make Sauce[(Spring Onion,4,pieces), (Garlic,4,cloves),(Ginger,1,thumb), (chilli Flakes, 1, g), (Sugar,5, g),(Rice-wine Vinegar, 20, ml),(Soy Sauce,90,ml), (Cornstarch,2,g)
+            (Canola Oil,10,ml),(Sesame Oil,2,ml), (Water,40,ml)] -> [(Sauce,150,ml)]
+{
+      #Mise en Place{
+       Slice the white part of the !{onion: Quarter (lengthwise) and finely slice}!, !{dice:preferably a fine dice}! the ginger,
+       as well as the !{garlic: Not too fine to prevent burning}!. Make !{cornstarch-slurry: water and cornstarch}!. Arrange every ingredient for easy access.
+       }
+       #Make Base{
+       !{Preheat: Medium-high heat}! the oil in a saute pan. Add the !{onion:chopped white parts}!, the garlic, the ginger and the chilli flakes and continue for about a
+       !{minute: avoid browning}!.
+       }
+       #Construct Sauce{
+       Crank heat up to high. Add the soy sauce, the vinegar and the sugar.!{Wait:30 seconds or until it has reduced slightly}!.
+       !{Slowly: Add a little bit. Wait. Observe what happened. Repeat.}! add the cornstarch-slurry until the !{desired: it should lightly coat the back of a spoon}!
+       !{consistency: CAREFUL: If you add to much, you will end up with a slime}! is obtained.
+       Add the sesame oil and adjust !{seasoning:salt, soy sauce, rice-wine vinegar, sugar}!.
+       }
+
+}
+
+#Construct Dish[(Sauce,150,ml),(Lime Juice,7,ml), (Sugar,1, g), (Salt,1, g),(Blanched Green Beans, 400, g),(Roasted Peanuts,100,g), (Canola Oil,10,g),(Spring Onion,4,pieces)]
+{
+    #Saute Green Beans{
+        Add the ${oil:Canola Oil}$ to a large saute pan, when it is hot !{enough:When the butter should foam}! add the ${green beans:Blanched Green Beans}$ and
+        saute them for !{about:If the soften up to much, STOP!}! '{2 minutes:}'.
+        }
+    #Add the Sauce{
+        Add the sauce to the green beans and !{reduce:On high heat}! until it !{properly coats:If necessary carefully add a little water}! the ${green beans:Blanched Green Beans}$.
+        }
+    #Add Toppings{
+        Add the !{copped:roughly}! nuts and the sliced spring !{onions:remaining green part}!.
+            }
+    #Adjust Seasoning{
+        Adjust acidity with ${lime juice:Lime Juice}$. Adjust seasoning with ${salt:Salt}$ and ${sugar:Sugar}$.
+        }
+
+}
+}
+

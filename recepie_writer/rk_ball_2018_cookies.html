@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        
+html, body {
+  height: 100%;
+  margin:0;
+}
+
+body {
+    text-align:left;
+    padding: 20px;
+
+    font-family: "Verdana";
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,h2, h3 {
+    font-family: "Georgia";
+    font-weight: normal;
+
+}
+h1 {
+    font-size: 42px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-right:10px;
+}
+
+h2 {
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+
+}
+
+tr {
+    padding: 20px;
+}
+
+.first_col{
+   padding-right: 30px
+}
+
+.header {
+    width=100%;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: flex-start;
+
+
+}
+
+.comment {
+   padding:10px;
+   margin-top:20px;
+   color: #d9d9d9;
+   border-top: 1px solid #d9d9d9;
+   font-size: 11px;
+   font-weight: lighter;
+}
+
+.version_button_div{
+    padding-top: 10px;
+}
+
+
+.version_button {
+    background-color: white;
+    border: 2px solid green;
+    color: black;
+    padding: 3px 5px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 4px 2px;
+    margin-top: 15px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.version_button:hover {
+    /*background-color: #4CAF50; /* Green */
+    /*color: white;*/
+}
+
+.phase_button_div{
+    padding-top: 10px;
+
+}
+
+
+.phase_button {
+    background-color: white; /* Green */
+    border: none;
+    font-family: "Verdana";
+    color: black;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.phase_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.phase_button span:after {
+  content: '\00bb';
+  color: green;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.phase_button:hover span {
+  padding-right: 25px;
+  margin-right: -25px;
+}
+
+.phase_button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.phase_container {
+    border-right: 1px solid black;
+    padding-right: 40px;
+    margin-right: 30px;
+    padding-top: 5px;
+    min-width: 180px;
+}
+
+.step_field {
+    width: 100%;
+    display: none;
+}
+
+.step_container {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.step{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bfbfbf;
+    margin-bottom:30px;
+
+}
+
+.ingredient_list {
+    border: 2px solid black;
+    background-color: white;
+    margin-top: -60px;
+    margin-right: 20px;
+    padding: 15px;
+    padding-top:10px;
+    padding-bottom:20px;
+    display: none;
+}
+
+
+
+.main_container {
+  display: none;
+  justify-content: flex-start;
+  flex: 1;
+
+}
+
+
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+    width: 120px;
+    background-color: #666666;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -80px;
+    pointer-events: none;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.tooltip_bottom {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip_bottom .tooltiptext_bottom {
+    opacity: 0;
+    width: 120px;
+    background-color: #666666;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -80px;
+    transition: opacity 1s;
+    pointer-events: none;
+ }
+
+.tooltip_bottom .tooltiptext_bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  transparent transparent black transparent;
+
+
+}
+
+
+
+.tooltip_bottom:hover .tooltiptext_bottom {
+    opacity: 1;
+    -webkit-transition-delay: 1s; /* Safari */
+    transition-delay: 1s;
+}
+
+    </style>
+
+    <body  onload="selectVersion('v1')">
+        <div class="header">
+            <h1>Cookies</h1>
+            <div>
+                
+    <span class="tooltip_bottom">
+    <span class="version_button_div">
+        <button class="version_button" id="button_v1" onclick="selectVersion('v1')" style="vertical-align:middle"><span>v1</span></button>
+    </span>
+    <span class="tooltiptext_bottom">This is the original version</span></span>
+    
+    <span class="tooltip_bottom">
+    <span class="version_button_div">
+        <button class="version_button" id="button_v2" onclick="selectVersion('v2')" style="vertical-align:middle"><span>v2</span></button>
+    </span>
+    <span class="tooltiptext_bottom">Some improvement ideas</span></span>
+    
+            </div>
+        </div>
+            
+        <div class="main_container v1">
+            <div class="phase_container">
+                
+    <div class="phase_button_div">
+        <button class="phase_button" id="button_v1_caramelise_white_chocolate_" onclick="selectInfo('v1_caramelise_white_chocolate_')" style="vertical-align:middle"><span>Caramelise white chocolate </span></button>
+    </div>
+    
+    <div class="phase_button_div">
+        <button class="phase_button" id="button_v1_wet_stage_" onclick="selectInfo('v1_wet_stage_')" style="vertical-align:middle"><span>Wet Stage </span></button>
+    </div>
+    
+    <div class="phase_button_div">
+        <button class="phase_button" id="button_v1_dry_stage_" onclick="selectInfo('v1_dry_stage_')" style="vertical-align:middle"><span>Dry Stage </span></button>
+    </div>
+    
+    <div class="phase_button_div">
+        <button class="phase_button" id="button_v1_baking_" onclick="selectInfo('v1_baking_')" style="vertical-align:middle"><span>Baking </span></button>
+    </div>
+    
+            </div>
+            <div class="step_container">
+                
+            <div class="step_field v1_caramelise_white_chocolate_">
+                <h2>Caramelise white chocolate :</h2>
+                
+            <div class="step v1_prepare_chocolate">
+                <h3>Prepare Chocolate:</h3>
+                Break <span class="ingredient ['white_couverture_chocolate']">white chocolate</span> into pieces and place in a
+        <span class="tooltip">baking dish<span class="tooltiptext">relatively shallow, however you need to be able to stir the chocolate relatively vigorously</span></span>.
+            </div>
+            
+
+            <div class="step v1_bake_chocolate">
+                <h3>Bake Chocolate:</h3>
+                Place Chocolate in a 180 degree oven for 10 minutes.
+            </div>
+            
+
+            <div class="step v1_stir">
+                <h3>Stir:</h3>
+                The chocolate looks as if it may have seized. <span class="tooltip">Stir<span class="tooltiptext">Rubber spatula works particularly well</span></span> until it is
+        <span class="tooltip">liquid<span class="tooltiptext">melted chocolate consistency</span></span> once again.
+            </div>
+            
+
+            <div class="step v1_repeat">
+                <h3>Repeat:</h3>
+                Repeat "Bake Chocolate" and "Stir" until <span class="tooltip">desired shade<span class="tooltiptext">I went for a light golden brown</span></span> of brown is achieved.
+            </div>
+            
+
+            </div>
+
+            <div class="step_field v1_wet_stage_">
+                <h2>Wet Stage :</h2>
+                
+            <div class="step v1_fat_and_flavour">
+                <h3>Fat and Flavour:</h3>
+                Melt the <span class="ingredient ['butter']">butter</span> at low heat.
+        <span class="tooltip">Add<span class="tooltiptext">As soon as there is a puddle of butter covering the bottom -> prevent burning of spices</span></span> the
+        <span class="tooltip">spices <span class="tooltiptext">Espresso Powder, Cinnamon, Ginger, Cardamon, Salt</span></span> <span class="ingredient ['espresso_powder', 'cinnamon', 'ginger', 'cardamon', 'salt']"></span>.
+         Let it cool to room temperature.
+            </div>
+            
+
+            <div class="step v1_fat,_sugar_and_eggs">
+                <h3>Fat, Sugar and Eggs:</h3>
+                Combine the <span class="ingredient ['white_caster_sugar', 'brown_sugar']">sugars</span> and the <span class="ingredient ['butter']">butter</span>.
+        Following this add the <span class="ingredient ['eggs']">eggs</span> and combine thoroughly.
+            </div>
+            
+
+            <div class="step v1_last_flavour">
+                <h3>Last Flavour:</h3>
+                Add <span class="ingredient ['vanilla_syrup']">vanilla</span> <span class="tooltip">syrup<span class="tooltiptext">or sugar or essence or seeds</span></span> and <span class="ingredient ['balsamic_vinegar']">balsamic vinegar</span>
+            </div>
+            
+
+            </div>
+
+            <div class="step_field v1_dry_stage_">
+                <h2>Dry Stage :</h2>
+                
+            <div class="step v1_combine_dry_stuff">
+                <h3>Combine Dry Stuff:</h3>
+                Combine dry <span class="tooltip">stuff<span class="tooltiptext">Wow such an extensive step</span></span>.
+            </div>
+            
+
+            <div class="step v1_combine_dry_and_wet_stuff">
+                <h3>Combine Dry and Wet Stuff:</h3>
+                Combine dry and wet <span class="tooltip">stuff<span class="tooltiptext">From the previous stage</span></span>.
+            </div>
+            
+
+            <div class="step v1_wait">
+                <h3>Wait:</h3>
+                Place the dough into the fridge for at <span class="tooltip">least<span class="tooltiptext">the longer the better, but only up to around 24h</span></span> 30 min.
+            </div>
+            
+
+            </div>
+
+            <div class="step_field v1_baking_">
+                <h2>Baking :</h2>
+                
+            <div class="step v1_balls">
+                <h3>Balls:</h3>
+                Form 40g balls out of the cookie dough.
+            </div>
+            
+
+            <div class="step v1_cover">
+                <h3>Cover:</h3>
+                <span class="tooltip">Melt<span class="tooltiptext">e.g. Microwave</span></span> the white chocolate. Cover the balls
+        <span class="tooltip">thoroughly<span class="tooltiptext">about a teaspoon on the top; spread such that it start dripping down the sides. (Dipping may work fine too.)</span></span>.
+            </div>
+            
+
+            <div class="step v1_bake">
+                <h3>Bake:</h3>
+                Bake the balls in the oven for 13 minutes at 170 degree C.
+            </div>
+            
+
+            </div>
+
+            </div>
+            <div class="ingredient_container">
+                
+            <div class="ingredient_list v1_caramelise_white_chocolate_">
+                <table><tr><th>Ingredients:</th><th></th><th></th></tr>
+<tr class="white_couverture_chocolate"><td class="first_col" >White Couverture Chocolate</td><td>200</td><td>g</td></tr>
+</table>
+            </div>
+
+            <div class="ingredient_list v1_wet_stage_">
+                <table><tr><th>Ingredients:</th><th></th><th></th></tr>
+<tr class="butter"><td class="first_col" >Butter</td><td>200</td><td>g</td></tr>
+<tr class="white_caster_sugar"><td class="first_col" >White Caster Sugar</td><td>200</td><td>g</td></tr>
+<tr class="brown_sugar"><td class="first_col" >Brown Sugar</td><td>100</td><td>g</td></tr>
+<tr class="espresso_powder"><td class="first_col" >Espresso Powder</td><td>4</td><td>tsp</td></tr>
+<tr class="cinnamon"><td class="first_col" >Cinnamon</td><td>1.5</td><td>tsp</td></tr>
+<tr class="ginger"><td class="first_col" >Ginger</td><td>1</td><td>tsp</td></tr>
+<tr class="cardamon"><td class="first_col" >Cardamon</td><td>0.5</td><td>tsp</td></tr>
+<tr class="salt"><td class="first_col" >Salt</td><td>1</td><td>tsp</td></tr>
+<tr class="vanilla_syrup"><td class="first_col" >Vanilla Syrup</td><td>2</td><td>tsp</td></tr>
+<tr class="balsamic_vinegar"><td class="first_col" >Balsamic Vinegar</td><td>1.5</td><td>tsp</td></tr>
+<tr class="eggs"><td class="first_col" >Eggs</td><td>2</td><td></td></tr>
+</table>
+            </div>
+
+            <div class="ingredient_list v1_dry_stage_">
+                <table><tr><th>Ingredients:</th><th></th><th></th></tr>
+<tr class="cake_flour"><td class="first_col" >Cake Flour</td><td>140</td><td>g</td></tr>
+<tr class="bread_flour"><td class="first_col" >Bread Flour</td><td>80</td><td>g</td></tr>
+<tr class="coco_powder"><td class="first_col" >Coco Powder</td><td>100</td><td>g</td></tr>
+<tr class="baking_powder"><td class="first_col" >Baking Powder</td><td>1</td><td>tl</td></tr>
+<tr class="baking_soda"><td class="first_col" >Baking Soda</td><td>2</td><td>tl</td></tr>
+<tr class="wet_stuff"><td class="first_col" >Wet Stuff</td><td></td><td></td></tr>
+</table>
+            </div>
+
+            <div class="ingredient_list v1_baking_">
+                <table><tr><th>Ingredients:</th><th></th><th></th></tr>
+<tr class="cookie_dough"><td class="first_col" >Cookie Dough</td><td></td><td></td></tr>
+<tr class="caramelised_white_chocolate"><td class="first_col" >Caramelised White Chocolate</td><td></td><td></td></tr>
+</table>
+            </div>
+
+            </div>
+        </div>
+        
+        <div class="main_container v2">
+            <div class="phase_container">
+                
+    <div class="phase_button_div">
+        <button class="phase_button" id="button_v2_caramelise_white_chocolate_" onclick="selectInfo('v2_caramelise_white_chocolate_')" style="vertical-align:middle"><span>Caramelise white chocolate </span></button>
+    </div>
+    
+    <div class="phase_button_div">
+        <button class="phase_button" id="button_v2_wet_stage_" onclick="selectInfo('v2_wet_stage_')" style="vertical-align:middle"><span>Wet Stage </span></button>
+    </div>
+    
+    <div class="phase_button_div">
+        <button class="phase_button" id="button_v2_dry_stage_" onclick="selectInfo('v2_dry_stage_')" style="vertical-align:middle"><span>Dry Stage </span></button>
+    </div>
+    
+    <div class="phase_button_div">
+        <button class="phase_button" id="button_v2_baking_" onclick="selectInfo('v2_baking_')" style="vertical-align:middle"><span>Baking </span></button>
+    </div>
+    
+            </div>
+            <div class="step_container">
+                
+            <div class="step_field v2_caramelise_white_chocolate_">
+                <h2>Caramelise white chocolate :</h2>
+                
+            <div class="step v2_prepare_chocolate">
+                <h3>Prepare Chocolate:</h3>
+                Break <span class="ingredient ['white_couverture_chocolate']">white chocolate</span> into pieces and place in a
+        <span class="tooltip">bowl<span class="tooltiptext">microwave save and large enough to stir comfortably</span></span>.
+            </div>
+            
+
+            <div class="step v2_microwave_chocolate">
+                <h3>Microwave Chocolate:</h3>
+                Place Chocolate in Microwave for 20 seconds.
+            </div>
+            
+
+            <div class="step v2_stir">
+                <h3>Stir:</h3>
+                The chocolate looks as if it may have seized. <span class="tooltip">Stir<span class="tooltiptext">Rubber spatula works particularly well</span></span> until it is
+        <span class="tooltip">liquid<span class="tooltiptext">melted chocolate consistency</span></span> once again.
+            </div>
+            
+
+            <div class="step v2_repeat">
+                <h3>Repeat:</h3>
+                Repeat "Microwave Chocolate" and "Stir" until <span class="tooltip">desired shade<span class="tooltiptext">I went for a light golden brown</span></span> of brown is achieved.
+            </div>
+            
+
+            </div>
+
+            <div class="step_field v2_wet_stage_">
+                <h2>Wet Stage :</h2>
+                
+            <div class="step v2_fat_and_flavour">
+                <h3>Fat and Flavour:</h3>
+                Melt the <span class="ingredient ['butter']">butter</span> at low heat.
+        <span class="tooltip">Add<span class="tooltiptext">As soon as there is a puddle of butter covering the bottom -> prevent burning of spices</span></span> the
+        <span class="tooltip">spices <span class="tooltiptext">Espresso Powder, Cinnamon, Ginger, Cardamon, Salt</span></span> <span class="ingredient ['espresso_powder', 'cinnamon', 'ginger', 'cardamon', 'salt']"></span>.
+         Let it cool to room temperature.
+            </div>
+            
+
+            <div class="step v2_fat,_sugar_and_eggs">
+                <h3>Fat, Sugar and Eggs:</h3>
+                Combine the <span class="ingredient ['white_caster_sugar', 'brown_sugar']">sugars</span> and the <span class="ingredient ['butter']">butter</span>.
+        Following this add the <span class="ingredient ['eggs']">eggs</span> and the egg yolk. Combine thoroughly.
+            </div>
+            
+
+            <div class="step v2_last_flavour">
+                <h3>Last Flavour:</h3>
+                Add <span class="ingredient ['vanilla_syrup']">vanilla</span> <span class="tooltip">syrup<span class="tooltiptext">or sugar or essence or seeds</span></span> and <span class="ingredient ['balsamic_vinegar']">balsamic vinegar</span>
+            </div>
+            
+
+            </div>
+
+            <div class="step_field v2_dry_stage_">
+                <h2>Dry Stage :</h2>
+                
+            <div class="step v2_combine_dry_stuff">
+                <h3>Combine Dry Stuff:</h3>
+                Combine dry <span class="tooltip">stuff<span class="tooltiptext">Wow such an extensive step</span></span>.
+            </div>
+            
+
+            <div class="step v2_combine_dry_and_wet_stuff">
+                <h3>Combine Dry and Wet Stuff:</h3>
+                Combine dry and wet <span class="tooltip">stuff<span class="tooltiptext">From the previous stage</span></span>.
+            </div>
+            
+
+            <div class="step v2_add_chocolate">
+                <h3>Add Chocolate:</h3>
+                Chop the chocolate and <span class="tooltip">add<span class="tooltiptext">Stir as little as possible</span></span> to the dough.
+            </div>
+            
+
+            <div class="step v2_wait">
+                <h3>Wait:</h3>
+                Place the dough into the fridge for at <span class="tooltip">least<span class="tooltiptext">the longer the better, but only up to around 24h</span></span> 30 min.
+            </div>
+            
+
+            </div>
+
+            <div class="step_field v2_baking_">
+                <h2>Baking :</h2>
+                
+            <div class="step v2_balls">
+                <h3>Balls:</h3>
+                Form 40g balls out of the cookie dough.
+            </div>
+            
+
+            <div class="step v2_cover">
+                <h3>Cover:</h3>
+                <span class="tooltip">Melt<span class="tooltiptext">e.g. Microwave</span></span> the white chocolate. Cover the balls
+        <span class="tooltip">thoroughly<span class="tooltiptext">about a teaspoon on the top; spread such that it start dripping down the sides. (Dipping may work fine too.)</span></span>.
+            </div>
+            
+
+            <div class="step v2_bake">
+                <h3>Bake:</h3>
+                Bake the balls in the oven for 13 minutes at 170 degree C.
+            </div>
+            
+
+            </div>
+
+            </div>
+            <div class="ingredient_container">
+                
+            <div class="ingredient_list v2_caramelise_white_chocolate_">
+                <table><tr><th>Ingredients:</th><th></th><th></th></tr>
+<tr class="white_couverture_chocolate"><td class="first_col" >White Couverture Chocolate</td><td>200</td><td>g</td></tr>
+</table>
+            </div>
+
+            <div class="ingredient_list v2_wet_stage_">
+                <table><tr><th>Ingredients:</th><th></th><th></th></tr>
+<tr class="butter"><td class="first_col" >Butter</td><td>200</td><td>g</td></tr>
+<tr class="white_caster_sugar"><td class="first_col" >White Caster Sugar</td><td>200</td><td>g</td></tr>
+<tr class="brown_sugar"><td class="first_col" >Brown Sugar</td><td>100</td><td>g</td></tr>
+<tr class="espresso_powder"><td class="first_col" >Espresso Powder</td><td>4</td><td>tsp</td></tr>
+<tr class="cinnamon"><td class="first_col" >Cinnamon</td><td>1.5</td><td>tsp</td></tr>
+<tr class="ginger"><td class="first_col" >Ginger</td><td>1</td><td>tsp</td></tr>
+<tr class="cardamon"><td class="first_col" >Cardamon</td><td>0.5</td><td>tsp</td></tr>
+<tr class="salt"><td class="first_col" >Salt</td><td>1</td><td>tsp</td></tr>
+<tr class="vanilla_syrup"><td class="first_col" >Vanilla Syrup</td><td>2</td><td>tsp</td></tr>
+<tr class="balsamic_vinegar"><td class="first_col" >Balsamic Vinegar</td><td>1.5</td><td>tsp</td></tr>
+<tr class="eggs"><td class="first_col" >Eggs</td><td>2</td><td></td></tr>
+<tr class="egg_yolk"><td class="first_col" >Egg Yolk</td><td>1</td><td></td></tr>
+</table>
+            </div>
+
+            <div class="ingredient_list v2_dry_stage_">
+                <table><tr><th>Ingredients:</th><th></th><th></th></tr>
+<tr class="cake_flour"><td class="first_col" >Cake Flour</td><td>140</td><td>g</td></tr>
+<tr class="bread_flour"><td class="first_col" >Bread Flour</td><td>80</td><td>g</td></tr>
+<tr class="coco_powder"><td class="first_col" >Coco Powder</td><td>100</td><td>g</td></tr>
+<tr class="dark_chocolate"><td class="first_col" >Dark Chocolate</td><td>50</td><td>g</td></tr>
+<tr class="baking_powder"><td class="first_col" >Baking Powder</td><td>1</td><td>tl</td></tr>
+<tr class="baking_soda"><td class="first_col" >Baking Soda</td><td>2</td><td>tl</td></tr>
+<tr class="wet_stuff"><td class="first_col" >Wet Stuff</td><td></td><td></td></tr>
+</table>
+            </div>
+
+            <div class="ingredient_list v2_baking_">
+                <table><tr><th>Ingredients:</th><th></th><th></th></tr>
+<tr class="cookie_dough"><td class="first_col" >Cookie Dough</td><td></td><td></td></tr>
+<tr class="caramelised_white_chocolate"><td class="first_col" >Caramelised White Chocolate</td><td></td><td></td></tr>
+</table>
+            </div>
+
+            </div>
+        </div>
+        
+
+        <script>
+            function selectInfo(div_id) {
+
+    var divsToHide = document.getElementsByClassName("step_field"); //divsToHide is an array
+    for(var i = 0; i < divsToHide.length; i++){
+       divsToHide[i].style.display = "none"; // depending on what you're doing
+    }
+
+    var buttons = document.getElementsByClassName("phase_button"); //divsToHide is an array
+    for(var i = 0; i < buttons.length; i++){
+       buttons[i].style.color = "black"; // depending on what you're doing
+    }
+
+    var ing = document.getElementsByClassName("ingredient_list"); //divsToHide is an array
+    for(var i = 0; i < ing.length; i++){
+        ing[i].style.display = "none";
+    }
+
+
+
+    var y = document.getElementById("button_"+div_id)
+    y.style.color="green";
+
+    var x = document.getElementsByClassName(div_id);
+    for(var i = 0; i < x.length; i++){
+        if (x[i].style.display === "none") {
+            x[i].style.display = "block";
+
+        } else {
+            x[i].style.display = "none";
+        }
+    }
+
+
+
+}
+            
+function selectVersion(version_group) {
+
+    var divsToHide = document.getElementsByClassName('main_container'); //divsToHide is an array
+    for(var j = 0; j < divsToHide.length; j++){
+         divsToHide[j].style.display = "none"; // depending on what you're doing
+   }
+
+    var button = document.getElementsByClassName('version_button');
+    for(var i = 0; i < button.length; i++){
+        button[i].style.background = "white"; // depending on what you're doing
+        button[i].style.color = "black";
+    }
+
+   var y = document.getElementById("button_"+version_group);
+   y.style.background="green";
+   y.style.background.hover="green";
+   y.style.color = "white";
+
+   var divsToShow = document.getElementsByClassName(version_group);
+   for(var i = 0; i < divsToShow.length; i++){
+       if (divsToShow[i].style.display === "none") {
+           divsToShow[i].style.display = "flex";
+       } else {
+           divsToShow[i].style.display = "none";
+       }
+   }
+}
+
+function unfade(element) {
+    var op = 0.1;  // initial opacity
+    element.style.display = 'block';
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 50);
+}
+
+function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 3);
+}
+        </script>
+    </body>
+
+</html>

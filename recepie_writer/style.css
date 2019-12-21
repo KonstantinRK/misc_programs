@@ -1,0 +1,285 @@
+
+html, body {
+  height: 100%;
+  margin:0;
+}
+
+body {
+    text-align:left;
+    padding: 20px;
+
+    font-family: "Verdana";
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,h2, h3 {
+    font-family: "Georgia";
+    font-weight: normal;
+
+}
+h1 {
+    font-size: 42px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-right:10px;
+}
+
+h2 {
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+
+}
+
+tr {
+    padding: 20px;
+}
+
+.first_col{
+   padding-right: 30px
+}
+
+.header {
+    width=100%;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: flex-start;
+
+
+}
+
+.comment {
+   padding:10px;
+   margin-top:20px;
+   color: #d9d9d9;
+   border-top: 1px solid #d9d9d9;
+   font-size: 11px;
+   font-weight: lighter;
+}
+
+.version_button_div{
+    padding-top: 10px;
+}
+
+
+.version_button {
+    background-color: white;
+    border: 2px solid green;
+    color: black;
+    padding: 3px 5px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 4px 2px;
+    margin-top: 15px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.version_button:hover {
+    /*background-color: #4CAF50; /* Green */
+    /*color: white;*/
+}
+
+.phase_button_div{
+    padding-top: 10px;
+
+}
+
+
+.phase_button {
+    background-color: white; /* Green */
+    border: none;
+    font-family: "Verdana";
+    color: black;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.phase_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.phase_button span:after {
+  content: '\00bb';
+  color: green;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.phase_button:hover span {
+  padding-right: 25px;
+  margin-right: -25px;
+}
+
+.phase_button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.phase_container {
+    border-right: 1px solid black;
+    padding-right: 40px;
+    margin-right: 30px;
+    padding-top: 5px;
+    min-width: 180px;
+}
+
+.step_field {
+    width: 100%;
+    display: none;
+}
+
+.step_container {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.step{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bfbfbf;
+    margin-bottom:30px;
+
+}
+
+.ingredient_list {
+    border: 2px solid black;
+    background-color: white;
+    margin-top: -60px;
+    margin-right: 20px;
+    padding: 15px;
+    padding-top:10px;
+    padding-bottom:20px;
+    display: none;
+}
+
+
+
+.main_container {
+  display: none;
+  justify-content: flex-start;
+  flex: 1;
+
+}
+
+
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+    width: 120px;
+    background-color: #666666;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -80px;
+    pointer-events: none;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.tooltip_bottom {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip_bottom .tooltiptext_bottom {
+    opacity: 0;
+    width: 120px;
+    background-color: #666666;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -80px;
+    transition: opacity 1s;
+    pointer-events: none;
+ }
+
+.tooltip_bottom .tooltiptext_bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  transparent transparent black transparent;
+
+
+}
+
+
+
+.tooltip_bottom:hover .tooltiptext_bottom {
+    opacity: 1;
+    -webkit-transition-delay: 1s; /* Safari */
+    transition-delay: 1s;
+}

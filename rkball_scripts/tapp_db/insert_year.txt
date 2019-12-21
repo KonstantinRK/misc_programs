@@ -1,0 +1,79 @@
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+INSERT INTO  tapp_companylog_types (id, name, glyphicon, color, description, data_fields, hidden)
+VALUES ('10', 'Liste 2018', 'fire', '3289650', 'Priorität', '[]', '1')
+
+
+SELECT DISTINCT tapp_companylog.company, tapp_companies.name, tapp_companylog.data, tapp_companylog.message, tapp_companylog.created_when
+FROM tapp_companylog
+INNER JOIN tapp_companies ON tapp_companylog.company=tapp_companies.id
+WHERE (tapp_companylog.type=4 AND tapp_companylog.created_when > '2017-09-20') OR
+(tapp_companylog.created_when='2017-09-11 21:12:57' AND tapp_companylog.type=9);
+
+SELECT tapp_companylog.company, tapp_companies.name, tapp_companylog.data, tapp_companylog.message, tapp_companylog.created_when
+FROM tapp_companylog
+INNER JOIN tapp_companies ON tapp_companylog.company=tapp_companies.id
+WHERE (tapp_companylog.type=9 AND tapp_companylog.message='Auto-Import from 2017-09-11'
+AND tapp_companylog.created_when='2017-09-11 21:12:57')
+
+
+
+21:10:15
+21:10:48
+21:11:09
+21:12:08
+21:12:57
+
+
+
+SELECT COUNT(tapp_companylog.company)
+FROM tapp_companylog
+INNER JOIN tapp_companies ON tapp_companylog.company=tapp_companies.id
+WHERE (tapp_companylog.type=9 AND tapp_companylog.message='Auto-Import from 2017-09-11'
+AND tapp_companylog.created_when='2017-09-11 21:12:57')
+
+
+COUNT(tapp_companylog.company)
+
+
+
+SELECT DISTINCT tapp_companylog.company
+FROM tapp_companylog
+INNER JOIN tapp_companies ON tapp_companylog.company=tapp_companies.id
+WHERE (tapp_companylog.type=4 AND tapp_companylog.created_when > '2017-09-20') OR
+(tapp_companylog.created_when='2017-09-11 21:12:57' AND tapp_companylog.type=9);
+
+SELECT DISTINCT tapp_companylog.company, tapp_companies.name
+FROM tapp_companylog
+INNER JOIN tapp_companies ON tapp_companylog.company=tapp_companies.id
+WHERE (tapp_companylog.type=4 AND tapp_companylog.created_when > '2017-09-20');
+
+
+SELECT DISTINCT tapp_companylog.company, tapp_companies.name
+FROM tapp_companylog
+INNER JOIN tapp_companies ON tapp_companylog.company=tapp_companies.id
+WHERE (tapp_companylog.created_when='2017-09-11 21:12:57' AND tapp_companylog.type=9);
+
+
+INSERT INTO `tapp_companylog`(`id`, `company`, `type`, `message`, `latitude`, `longitude`, `data`, `created_by`, `created_when`, `acknowledged_by`, `acknowledged_when`)
+VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11])
+
+Michael Mulazzani
+
+'9','164790','0','Michael','Mulazzani,'1','1','0','new_password','michael.mulazzani@gmx.at',NULL,NULL,'0','1','1','1',NULL
+
+
+
+
+INSERT INTO `tapp_user`(`id`, `rknumber`, `lecturer`, `firstname`, `lastname`, `superadmin`, `gender`, `addressid`, `password`, `email`, `phone`, `birthday`, `session_expiretime`, `session_ipcrosscheck`, `session_allowmultiplesessions`, `status`, `token`)
+VALUES ('9','164790','0','Michael','Mulazzani','1','1','0','164790','michael.mulazzani@gmx.at',NULL,NULL,'0','1','1','1',NULL);
+
+
+
+
+SELECT *
+FROM `tapp_companies`
+WHERE tapp_companies.tags LIKE '%\u00c4rzte%'
+OR tapp_companies.tags LIKE '%arzt%'
+OR tapp_companies.tags LIKE '%Arzt%';

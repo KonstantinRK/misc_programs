@@ -1,0 +1,136 @@
+<Green Beans>
+#v1[This is the original version]{
+#Prepare Nuts[(Almonds,50,g), (Walnuts,50,g), (Powdered Sugar,30,g), (Salt,2, g), (Canola Oil,100,ml)] ->
+[(Candied Almonds,55,g), (Candied Walnuts,55,g)]
+{
+    #Source{
+      Taken from &{here:https://www.youtube.com/watch?v=SLEzZwc6uOE}&.
+    }
+    #Blanch nuts{
+        Add ${nuts:[Almonds,Walnuts]}$ to ${salted:Salt}$ boiling water and boil them for about '{1 minute:1}'.
+    }
+    #Coat with sugar{
+        Place ${nuts:[Almonds,Walnuts]}$ in a !{container:with lid}!, add the ${sugar:Powdered Sugar}$ and mix
+        !{thoroughly:close the lid and shake ^_^}!
+    }
+    #Fry nuts{
+        !{Preheat:if you dip a wooden spoon into the oil you should see small bubbles}! ${oil:Canola Oil}$, add the ${coated:Powdered Sugar}$
+        ${nuts:[Almonds,Walnuts]}$ and fry them
+        for about '{5 minutes:5}', adjust heat !{accordingly:If they brown to fast turn down the heat or remove the pan
+        from the stove until everything settles}!
+    }
+     #Cool nuts{
+        Take the ${nuts:[Almonds,Walnuts]}$ out of the ${oil:Canola Oil}$, make sure they don't stick together and let them cool.
+
+     }
+}
+
+#Blanch Green Beans[(Green Beans,400,g), (Salt,5, g)] -> [(Blanched Green Beans, 400, g)]
+{     #Cook Green Beans{
+        Add the ${green beans:Green Beans}$ to ${salted:Salt}$ boiling water and boil them for about '{2 minuts:2}'.
+        }
+
+       #Cool Green Beans{
+        Drain the ${green beans:Green Beans}$ and immediately !{shock:Stops the cooking process and enhances color}!
+        them with cold water until they are cold.
+        }
+}
+
+
+
+
+#Make Sauce[(Onion,1,unit), (Garlic,4,cloves), (Salt,5, g), (Sugar,5, g),(Balsamic Vinegar, 5, ml),(Soy Sauce,3,ml), (Cornstarch,2,g)
+            (Butter,5,g), (Olive Oil,4,ml),(Water,5,ml)] -> [(Sauce,30,ml)]
+{
+}
+
+#Construct Dish[(Sauce,1,unit),(Lemon Juice,2,ml),  (Sugar,1, g), (Salt,1, g),(Blanched Green Beans, 400, g),(Candied Almonds,55,g),(Candied Walnuts,55,g),(Butter,10,g), (Feta,100,g)]
+{
+    #Saute Green Beans{
+        Add the ${butter:Butter}$ to a large frying pan, when it is hot !{enough:When the butter starts to foam}! add the ${green beans:Green Beans}$,
+        season them with ${salt:Salt}$ and saute them for !{about:If the soften up to much, STOP!}! '{2 minutes:}'.
+        }
+    #Add the Sauce{
+        Add the sauce to the green beans and !{reduce:On high heat}! the ${sauce:Sauce}$ until it !{properly coats:If necessary carefully add a little water}! the ${green beans:Green Beans}$.
+        Remove from the stove and let it cool slightly.
+        }
+    #Add Toppings{
+        Add the !{copped:roughly}! nuts and !{crumble:roughly}! in the feta. Wait.
+            }
+    #Adjust Seasoning{
+        Adjust acidity with ${lemon juice:Lemon Juice}$. Adjust further seasoning with ${salt:Salt}$ and ${sugar:Sugar}$.
+        If frisky add additional ${butter:Butter}$.
+        }
+
+}
+}
+
+#v2[This is the original version]{
+#LOL[(Almonds,50,g), (Walnuts,50,g), (Powdered Sugar,30,g), (Salt,2, g), (Canola Oil,100,ml)] ->
+[(Candied Almonds,55,g), (Candied Walnuts,55,g)]
+{
+    #Source{
+      Taken from &{here:https://www.youtube.com/watch?v=SLEzZwc6uOE}&.
+    }
+    #Blanch nuts{
+        Add ${nuts:[Almonds,Walnuts]}$ to ${salted:Salt}$ boiling water and boil them for about '{1 minute:1}'.
+    }
+    #Coat with sugar{
+        Place ${nuts:[Almonds,Walnuts]}$ in a !{container:with lid}!, add the ${sugar:Powdered Sugar}$ and mix
+        !{thoroughly:close the lid and shake ^_^}!
+    }
+    #Fry nuts{
+        !{Preheat:if you dip a wooden spoon into the oil you should see small bubbles}! ${oil:Canola Oil}$, add the ${coated:Powdered Sugar}$
+        ${nuts:[Almonds,Walnuts]}$ and fry them
+        for about '{5 minutes:5}', adjust heat !{accordingly:If they brown to fast turn down the heat or remove the pan
+        from the stove until everything settles}!
+    }
+     #Cool nuts{
+        Take the ${nuts:[Almonds,Walnuts]}$ out of the ${oil:Canola Oil}$, make sure they don't stick together and let them cool.
+
+     }
+}
+
+#HAHA[(Green Beans,400,g), (Salt,5, g)] -> [(Blanched Green Beans, 400, g)]
+{     #Cook Green Beans{
+        Add the ${green beans:Green Beans}$ to ${salted:Salt}$ boiling water and boil them for about '{2 minuts:2}'.
+        }
+
+       #Cool Green Beans{
+        Drain the ${green beans:Green Beans}$ and immediately !{shock:Stops the cooking process and enhances color}!
+        them with cold water until they are cold.
+        }
+}
+
+
+
+
+#ME[(Onion,1,unit), (Garlic,4,cloves), (Salt,5, g), (Sugar,5, g),(Balsamic Vinegar, 5, ml),(Soy Sauce,3,ml), (Cornstarch,2,g)
+            (Butter,5,g), (Olive Oil,4,ml),(Water,5,ml)] -> [(Sauce,30,ml)]
+{
+}
+
+#NON[(Sauce,1,unit),(Lemon Juice,2,ml),  (Sugar,1, g), (Salt,1, g),(Blanched Green Beans, 400, g),(Candied Almonds,55,g),(Candied Walnuts,55,g),(Butter,10,g), (Feta,100,g)]
+{
+    #Saute Green Beans{
+        Add the ${butter:Butter}$ to a large frying pan, when it is hot !{enough:When the butter starts to foam}! add the ${green beans:Green Beans}$,
+        season them with ${salt:Salt}$ and saute them for !{about:If the soften up to much, STOP!}! '{2 minutes:}'.
+        }
+    #Add the Sauce{
+        Add the sauce to the green beans and !{reduce:On high heat}! the ${sauce:Sauce}$ until it !{properly coats:If necessary carefully add a little water}! the ${green beans:Green Beans}$.
+        Remove from the stove and let it cool slightly.
+        }
+    #Add Toppings{
+        Add the !{copped:roughly}! nuts and !{crumble:roughly}! in the feta. Wait.
+            }
+    #Adjust Seasoning{
+        Adjust acidity with ${lemon juice:Lemon Juice}$. Adjust further seasoning with ${salt:Salt}$ and ${sugar:Sugar}$.
+        If frisky add additional ${butter:Butter}$.
+        }
+
+}
+}
+
+
+
+

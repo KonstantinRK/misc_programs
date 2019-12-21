@@ -1,0 +1,23 @@
+1: R then 2
+2: if t then 4 else 3
+3: R then 2
+4: R then 5
+5: if t then 21 else 6
+6: R then 7
+7: if t then 8 else 6
+8: L then 9
+9: d0 then 10
+10: L then 11
+11: if t then 12 else 10
+12: L then 13
+13: if t then 14 else 12
+14: R then 15
+15: if t then 19 else 16
+16: d0 then 17
+17: R then 18
+18: if t then 19 else 20
+19: R then 19
+20: d0 then 1
+21: L then 22
+22: L then 23
+23: if t then 0 else 22

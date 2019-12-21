@@ -1,0 +1,28 @@
+SELECT mybase.name, mybase.street, mybase.city, tapp_companylog.data ,tapp_companylog.message FROM (
+	SELECT tapp_companies.* FROM tapp_companies 
+    INNER JOIN tapp_companylog ON tapp_companies.id = tapp_companylog.company
+    WHERE tapp_companylog.type = 10
+    AND tapp_companylog.created_when BETWEEN '2018-09-11 21:12:57' AND NOW()
+	) AS mybase
+INNER JOIN tapp_companylog ON mybase.id = tapp_companylog.company 
+WHERE mybase.id NOT IN
+	(SELECT tapp_companies.id FROM tapp_companies
+     INNER JOIN tapp_companylog ON tapp_companies.id = tapp_companylog.company
+     WHERE tapp_companylog.type = 4
+	 OR tapp_companylog.type = 5
+	 AND tapp_companylog.created_when BETWEEN '2018-09-11 21:12:57' AND NOW())
+
+
+
+SELECT mybase.* FROM (
+	SELECT tapp_companies.id FROM tapp_companylog
+        INNER JOIN tapp_companies ON tapp_companylog.company = tapp_companies.id
+        WHERE tapp_companylog.type = 10
+	) as mybase
+WHERE mybase.id NOT IN (
+	SELECT tapp_companies.id FROM tapp_companylog
+        INNER JOIN tapp_companies ON tapp_companylog.company = tapp_companies.id
+        WHERE ((tapp_companylog.type = 4 OR tapp_companylog.type = 5) AND
+        tapp_companylog.created_when BETWEEN '2018-09-11 21:12:57' AND NOW())
+        )
+

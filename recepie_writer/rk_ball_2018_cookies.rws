@@ -1,0 +1,146 @@
+<Cookies: Test>
+#v1[This is the original version]{
+#Caramelise white chocolate [(white couverture Chocolate, 200,g)] -> [(caramelised white Chocolate, 190, g)]
+{
+    #Prepare Chocolate{
+        Break ${white chocolate:[white couverture Chocolate]}$ into pieces and place in a
+        !{baking dish: relatively shallow, however you need to be able to stir the chocolate relatively vigorously}!.
+
+    }
+    #Bake Chocolate{
+        Place Chocolate in a 180 degree oven for 10 minutes.
+    }
+    #Stir{
+        The chocolate looks as if it may have seized. !{Stir: Rubber spatula works particularly well}! until it is
+        !{liquid: melted chocolate consistency}! once again.
+    }
+     #Repeat{
+        Repeat "Bake Chocolate" and "Stir" until !{desired shade: I went for a light golden brown}! of brown is achieved.
+     }
+}
+
+#Wet Stage [(Butter, 200,g),(white caster Sugar, 200, g),(brown Sugar, 100, g),(Espresso Powder, 4,tsp)
+,(Cinnamon, 1.5,tsp),(Ginger, 1,tsp),(Cardamon, 0.5,tsp),(Salt, 1,tsp),(Vanilla Syrup, 2,tsp),(Balsamic Vinegar, 1.5,tsp),(Eggs, 2, )]
+-> [(Wet Stuff, , )]
+{
+    #Fat and Flavour{
+        Melt the ${butter:[Butter]}$ at low heat.
+        !{Add: As soon as there is a puddle of butter covering the bottom -> prevent burning of spices}! the
+        !{spices : Espresso Powder, Cinnamon, Ginger, Cardamon, Salt}! ${:[Espresso Powder,Cinnamon,Ginger,Cardamon,Salt]}$.
+         Let it cool to room temperature.
+    }
+    #Fat, Sugar and Eggs {
+        Combine the ${sugars:[white caster Sugar, brown Sugar]}$ and the ${butter:[Butter]}$.
+        Following this add the ${eggs:[Eggs]}$ and combine thoroughly.
+    }
+     #Last Flavour{
+        Add ${vanilla:[vanilla syrup]}$ !{syrup: or sugar or essence or seeds}! and ${balsamic vinegar: [balsamic vinegar]}$
+     }
+}
+
+#Dry Stage [(Cake Flour, 140, g),(Bread Flour, 80, g),(Coco Powder, 100, g),(Baking Powder, 1, tl),(Baking Soda, 2, tl),(Wet Stuff, , )] -> [(Cookie dough, , )]{
+    #Combine Dry Stuff{
+        Combine dry !{stuff: Wow such an extensive step}!.
+    }
+
+    #Combine Dry and Wet Stuff{
+        Combine dry and wet !{stuff: From the previous stage}!.
+    }
+
+    #Wait{
+        Place the dough into the fridge for at !{least: the longer the better, but only up to around 24h}! 30 min.
+    }
+}
+
+#Baking [(Cookie Dough, , ),(caramelised white Chocolate,,)]{
+
+    #Balls{
+        Form 40g balls out of the cookie dough.
+    }
+
+    #Cover{
+        !{Melt: e.g. Microwave}! the white chocolate. Cover the balls
+        !{thoroughly: about a teaspoon on the top; spread such that it start dripping down the sides. (Dipping may work fine too.)}!.
+    }
+
+    #Bake{
+        Bake the balls in the oven for 13 minutes at 170 degree C.
+    }
+}
+}
+#v2[Some improvement ideas]{
+#Caramelise white chocolate [(white couverture Chocolate, 200,g)] -> [(caramelised white Chocolate, 190, g)]
+{
+    #Prepare Chocolate{
+        Break ${white chocolate:[white couverture Chocolate]}$ into pieces and place in a
+        !{bowl: microwave save and large enough to stir comfortably}!.
+
+    }
+    #Microwave Chocolate{
+        Place Chocolate in Microwave for 20 seconds.
+    }
+    #Stir{
+        The chocolate looks as if it may have seized. !{Stir: Rubber spatula works particularly well}! until it is
+        !{liquid: melted chocolate consistency}! once again.
+    }
+     #Repeat{
+        Repeat "Microwave Chocolate" and "Stir" until !{desired shade: I went for a light golden brown}! of brown is achieved.
+     }
+}
+
+#Wet Stage [(Butter, 200,g),(white caster Sugar, 200, g),(brown Sugar, 100, g),(Espresso Powder, 4,tsp)
+,(Cinnamon, 1.5,tsp),(Ginger, 1,tsp),(Cardamon, 0.5,tsp),(Salt, 1,tsp),(Vanilla Syrup, 2,tsp),(Balsamic Vinegar, 1.5,tsp),(Eggs, 2, ),(Egg Yolk, 1, )]
+-> [(Wet Stuff, , )]
+{
+    #Fat and Flavour{
+        Melt the ${butter:[Butter]}$ at low heat.
+        !{Add: As soon as there is a puddle of butter covering the bottom -> prevent burning of spices}! the
+        !{spices : Espresso Powder, Cinnamon, Ginger, Cardamon, Salt}! ${:[Espresso Powder,Cinnamon,Ginger,Cardamon,Salt]}$.
+         Let it cool to room temperature.
+    }
+    #Fat, Sugar and Eggs {
+        Combine the ${sugars:[white caster Sugar, brown Sugar]}$ and the ${butter:[Butter]}$.
+        Following this add the ${eggs:[Eggs]}$ and the egg yolk. Combine thoroughly.
+    }
+     #Last Flavour{
+        Add ${vanilla:[vanilla syrup]}$ !{syrup: or sugar or essence or seeds}! and ${balsamic vinegar: [balsamic vinegar]}$
+     }
+}
+
+#Dry Stage [(Cake Flour, 140, g),(Bread Flour, 80, g),(Coco Powder, 100, g),(dark Chocolate, 50, g),(Baking Powder, 1, tl),(Baking Soda, 2, tl),(Wet Stuff, , )] -> [(Cookie dough, , )]{
+
+    #Combine Dry Stuff{
+        Combine dry !{stuff: Wow such an extensive step}!.
+    }
+
+    #Combine Dry and Wet Stuff{
+        Combine dry and wet !{stuff: From the previous stage}!.
+    }
+
+    #Add Chocolate{
+        Chop the chocolate and !{add: Stir as little as possible}! to the dough.
+    }
+
+    #Wait{
+        Place the dough into the fridge for at !{least: the longer the better, but only up to around 24h}! 30 min.
+    }
+}
+
+#Baking [(Cookie Dough, , ),(caramelised white Chocolate,,)]{
+
+    #Balls{
+        Form 40g balls out of the cookie dough.
+    }
+
+    #Cover{
+        !{Melt: e.g. Microwave}! the white chocolate. Cover the balls
+        !{thoroughly: about a teaspoon on the top; spread such that it start dripping down the sides. (Dipping may work fine too.)}!.
+    }
+
+    #Bake{
+        Bake the balls in the oven for 13 minutes at 170 degree C.
+    }
+}
+
+}
+
